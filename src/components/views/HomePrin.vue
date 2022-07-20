@@ -7,13 +7,14 @@
         </div>
         <div class="row mt-5">
             <div class="col-4">
-                <indicador></indicador>
+                <indicador titulo="Vagas abertas" indicador="100"></indicador>
             </div>
             <div class="col-4">
-                <indicador></indicador>
+                <indicador titulo="Profissionais cadastrados" indicador="225"></indicador>
             </div>
             <div class="col-4">
-                <indicador></indicador> 
+                <indicador titulo="Visitantes online" indicador="25"></indicador> 
+
             </div>
         </div>
     </div>
@@ -21,13 +22,11 @@
 <script>
 import PesquisarVaga from '@/components/comuns/PesquisarVaga.vue'
 import Indicador from '@/components/comuns/Indicador.vue'
-
 export default {
     name:'HomePrin',
     components:{
     PesquisarVaga,
-    Indicador
-
+    Indicador,
 },
     activated(){
         console.log('componente é ativado')
