@@ -1,11 +1,11 @@
 <template>
-    <div>
-        <h1>componente publicar vaga</h1>
-    </div>
+  <div>
+    <h1>componente publicar vaga</h1>
+  </div>
 </template>
 <script>
 export default {
-    name:'PublicarVaga',
-}
+  name: "PublicarVaga",
+};
 </script>
 <style></style>
