@@ -1,14 +1,16 @@
 <template>
 <div>
+  <h1>componente app</h1>
   <TopoSite/>
   <ConteudoSite></ConteudoSite>
+
   
 </div>
 </template>
 
 <script>
-import ConteudoSite from './components/layouts/ConteudoSite.vue'
-import TopoSite from './components/layouts/TopoSite.vue'
+import ConteudoSite from '@/components/layouts/ConteudoSite.vue' // @ = src
+import TopoSite from '@/components/layouts/TopoSite.vue'
 
 
 export default {
@@ -20,13 +22,6 @@ export default {
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
+
 </style>
