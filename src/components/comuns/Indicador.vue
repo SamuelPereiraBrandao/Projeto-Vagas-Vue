@@ -6,5 +6,5 @@
 </template>
 <script>
 export default{
-    name:''
+    name:'IndicadorDoSite'
 }</script>
