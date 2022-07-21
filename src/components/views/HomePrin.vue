@@ -10,7 +10,7 @@
       <div class="col">
         <vaga 
         :titulo="vaga.titulo"
-        :descricao="vaga.descricao"
+        :descricao-vaga="vaga.descricao"
         :salario="vaga.salario"
         :modalidade="vaga.modalidade"
         :tipo="vaga.tipo"
@@ -71,16 +71,16 @@ export default {
         titulo: "Analista Programador PHP Pleno",
         descricao:
           "Profissional com conhecimentos em PHP, Laravel e MySQL. Necessário 3 anos de experiências. Atuará na manutenção de sistemas legados da empresa.",
-        salario: "R$ 6.000,00",
+        salario:6000,
         modalidade: "Home Office",
         tipo: "PJ",
         publicacao: "20/07/2022",
-      },
+      },/*
       {
         titulo: "Programador JavaScript Vue",
         descricao:
           "Profissional com conhecimentos avançados em JavaScript e Vue.",
-        salario: "R$ 5.000,00",
+        salario: 5000,
         modalidade: "Presencial",
         tipo: "CLT",
         publicacao: "21/07/2022",
@@ -89,7 +89,7 @@ export default {
         titulo: "Programador JavaScript Vue Pleno",
         descricao:
           "Profissional com conhecimentos avançados em JavaScript e Vue.",
-        salario: "R$ 5.500,00",
+        salario: 5500,
         modalidade: "Home Office",
         tipo: "CLT",
         publicacao: "22/07/2022",
@@ -98,7 +98,7 @@ export default {
         titulo: "Analista de Banco de Dados Sênior",
         descricao:
           "Domínio dos bancos de dados SQL Server, Oracle, Postgre e MySQL",
-        salario: "R$ 9.000,00",
+        salario: 9000,
         modalidade: "Presencial",
         tipo: "PJ",
         publicacao: "23/07/2022",
@@ -107,11 +107,11 @@ export default {
         titulo: "Programador Web Júnior",
         descricao:
           "Conhecimentos básicos em HTML, CSS, JavaScript, Bootstrap, PHP e MySQL",
-        salario: "R$ 3.000,00",
+        salario: 3000,
         modalidade: "Presencial",
         tipo: "CLT",
         publicacao: "24/07/2022",
-      },
+      },*/
     ],
 
     
