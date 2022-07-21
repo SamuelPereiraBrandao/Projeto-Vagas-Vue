@@ -8,21 +8,16 @@
 
     <div class="row mt-5" v-for="(vaga, index) in vagas" :key="index">
       <div class="col">
-        <vaga 
-        :titulo="vaga.titulo"
-        :descricao-vaga="vaga.descricao"
-        :salario="vaga.salario"
-        :modalidade="vaga.modalidade"
-        :tipo="vaga.tipo"
-        :publicacao="vaga.publicacao"
+        <vaga
+          :titulo="vaga.titulo"
+          :descricao-vaga="vaga.descricao"
+          :salario="vaga.salario"
+          :modalidade="vaga.modalidade"
+          :tipo="vaga.tipo"
+          :publicacao="vaga.publicacao"
         />
       </div>
     </div>
-
-
-
-
-
 
     <div class="row mt-5">
       <div class="col-4">
@@ -71,11 +66,11 @@ export default {
         titulo: "Analista Programador PHP Pleno",
         descricao:
           "Profissional com conhecimentos em PHP, Laravel e MySQL. Necessário 3 anos de experiências. Atuará na manutenção de sistemas legados da empresa.",
-        salario:6000,
+        salario: 6000,
         modalidade: "Home Office",
         tipo: "PJ",
         publicacao: "20/07/2022",
-      },/*
+      } /*
       {
         titulo: "Programador JavaScript Vue",
         descricao:
@@ -111,10 +106,8 @@ export default {
         modalidade: "Presencial",
         tipo: "CLT",
         publicacao: "24/07/2022",
-      },*/
+      },*/,
     ],
-
-    
   }),
   methods: {
     getUsuariosOnline() {
