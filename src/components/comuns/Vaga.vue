@@ -22,15 +22,15 @@ export default {
       required: true,
       validator(p) {
         //console.log("Prop: ", p, p.length);
-        if(p.length < 6 ){
-        return false //se estiver inválido
-        }else 
-        return true //se estiver válido
+        if (p.length < 6) {
+          return false; //se estiver inválido
+        } else return true; //se estiver válido
       },
     },
     descricaoVaga: {
       type: String,
-      required: true,
+      default:'O contratante não adicionou uma descrição para essa vaga'
+ 
     },
     salario: {
       type: [Number, String],

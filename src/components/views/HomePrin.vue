@@ -70,7 +70,7 @@ export default {
         modalidade: "Home Office",
         tipo: "PJ",
         publicacao: "20/07/2022",
-      } /*
+      }, 
       {
         titulo: "Programador JavaScript Vue",
         descricao:
@@ -106,7 +106,7 @@ export default {
         modalidade: "Presencial",
         tipo: "CLT",
         publicacao: "24/07/2022",
-      },*/,
+      },
     ],
   }),
   methods: {
