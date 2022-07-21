@@ -6,7 +6,7 @@
     </div>
     <div class="card-footer">
       <small class="text-muted"
-        >{{salario}} | Modalidade: {{modalidade}} | Tipo {{tipo}} | Publicação:
+        >Salário: {{salario}} | Modalidade: {{modalidade}} | Tipo {{tipo}} | Publicação:
         {{publicacao}}</small
       >
     </div>

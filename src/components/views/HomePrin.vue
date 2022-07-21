@@ -19,6 +19,11 @@
       </div>
     </div>
 
+
+
+
+
+
     <div class="row mt-5">
       <div class="col-4">
         <indicador
@@ -51,6 +56,7 @@
 import PesquisarVaga from "@/components/comuns/PesquisarVaga.vue";
 import Indicador from "@/components/comuns/Indicador.vue";
 import Vaga from "@/components/comuns/Vaga.vue";
+
 export default {
   name: "HomePrin",
   components: {
@@ -107,6 +113,8 @@ export default {
         publicacao: "24/07/2022",
       },
     ],
+
+    
   }),
   methods: {
     getUsuariosOnline() {
