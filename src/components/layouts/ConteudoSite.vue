@@ -3,7 +3,7 @@
     <h1>{{ titulo }}</h1>
     <button @click="atualizarcomponente()">Atualizar</button>
     <button @click="conteudo = 'Home'">Home</button>
-    <button @click="conteudo = 'publicar-vaga'">Publicar Vaga</button>
+    <button @click="conteudo = 'PublicarVaga'">Publicar Vaga</button>
     <!-- renderizar de modo dinamico os componentes home e publicar-vaga -->
     <!--<home/>
         <publicar-vaga></publicar-vaga>-->

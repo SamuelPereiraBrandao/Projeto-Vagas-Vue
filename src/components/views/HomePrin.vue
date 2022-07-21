@@ -8,14 +8,7 @@
 
     <div class="row mt-5" v-for="(vaga, index) in vagas" :key="index">
       <div class="col">
-        <vaga
-          :titulo="vaga.titulo"
-          :descricao-vaga="vaga.descricao"
-          :salario="vaga.salario"
-          :modalidade="vaga.modalidade"
-          :tipo="vaga.tipo"
-          :publicacao="vaga.publicacao"
-        />
+        <vaga v-bind="vaga" />
       </div>
     </div>
 
@@ -70,7 +63,7 @@ export default {
         modalidade: "Home Office",
         tipo: "PJ",
         publicacao: "20/07/2022",
-      }, 
+      },
       {
         titulo: "Programador JavaScript Vue",
         descricao:

@@ -29,8 +29,7 @@ export default {
     },
     descricaoVaga: {
       type: String,
-      default:'O contratante não adicionou uma descrição para essa vaga'
- 
+      default: "O contratante não adicionou uma descrição para essa vaga",
     },
     salario: {
       type: [Number, String],
