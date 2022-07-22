@@ -81,10 +81,8 @@ export default {
   }),
   methods: {
     salvarVaga() {
-      
-      let  tempoDecorrido = Date.now()
-      let  dataAtual = new Date(tempoDecorrido)
-          
+      let tempoDecorrido = Date.now();
+      let dataAtual = new Date(tempoDecorrido);
 
       let vagas = JSON.parse(localStorage.getItem("vagas"));
       //console.log(vagas);
@@ -96,8 +94,8 @@ export default {
         salario: this.salario,
         modalidade: this.modalidade,
         tipo: this.tipo,
-        publicacao: dataAtual.toISOString()
-      })
+        publicacao: dataAtual.toISOString(), //data e hora no time zone UTc
+      });
       localStorage.setItem("vagas", JSON.stringify(vagas));
     },
   },
