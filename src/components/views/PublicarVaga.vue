@@ -19,8 +19,13 @@
     <div class="row mt-3">
       <div class="col">
         <label for="" class="form-label">Descrição</label>
-        <textarea type="text" rows="5" class="form-control" v-model="descricao" ></textarea>
-        
+        <textarea
+          type="text"
+          rows="5"
+          class="form-control"
+          v-model="descricao"
+        ></textarea>
+
         <div class="form-text">Informe os detalhes</div>
       </div>
     </div>
@@ -49,44 +54,48 @@
           <option value="1">CLT</option>
           <option value="2">PJ</option>
         </select>
-        <div class="form-text">
-          Informe o tipo de contratação
-        </div>
+        <div class="form-text">Informe o tipo de contratação</div>
       </div>
     </div>
-    
+
     <div class="row mt-3">
-      {{titulo}} | {{descricao}} | {{salario}} | {{modalidade}} | {{tipo}} | 
+      {{ titulo }} | {{ descricao }} | {{ salario }} | {{ modalidade }} |
+      {{ tipo }} |
       <div class="col">
-        <button type="submit" class="btn btn-primary" @click="salvarVaga()">Cadastrar</button>
+        <button type="submit" class="btn btn-primary" @click="salvarVaga()">
+          Cadastrar
+        </button>
       </div>
     </div>
-
-
   </div>
 </template>
 <script>
 export default {
   name: "PublicarVaga",
   data: () => ({
-    titulo:'',
-    descricao:'',
-    salario:'',
-    modalidade:'',
-    tipo:'',
+    titulo: "",
+    descricao: "",
+    salario: "",
+    modalidade: "",
+    tipo: "",
   }),
-  methods:{
-    salvarVaga(){
-      let vaga = {
+  methods: {
+    salvarVaga() {
+      let vagas = JSON.parse(localStorage.getItem("vagas"));
+      console.log(vagas);
+
+      if (!vagas) vagas = [];
+
+      vagas.push({
         titulo: this.titulo,
         descricao: this.descricao,
         salario: this.salario,
         modalidade: this.modalidade,
         tipo: this.tipo,
-      }
-      localStorage.setItem('vagas',JSON.stringify(vaga))
-    }
-  }
+      })
+      localStorage.setItem("vagas", JSON.stringify(vagas));
+    },
+  },
 };
 </script>
 <style>

@@ -54,53 +54,7 @@ export default {
   },
   data: () => ({
     usuariosOnline: 0,
-    vagas: [
-      {
-        titulo: "Analista Programador PHP Pleno",
-        descricao:
-          "Profissional com conhecimentos em PHP, Laravel e MySQL. Necessário 3 anos de experiências. Atuará na manutenção de sistemas legados da empresa.",
-        salario: 6000,
-        modalidade: "Home Office",
-        tipo: "PJ",
-        publicacao: "20/07/2022",
-      },
-      {
-        titulo: "Programador JavaScript Vue",
-        descricao:
-          "Profissional com conhecimentos avançados em JavaScript e Vue.",
-        salario: 5000,
-        modalidade: "Presencial",
-        tipo: "CLT",
-        publicacao: "21/07/2022",
-      },
-      {
-        titulo: "Programador JavaScript Vue Pleno",
-        descricao:
-          "Profissional com conhecimentos avançados em JavaScript e Vue.",
-        salario: 5500,
-        modalidade: "Home Office",
-        tipo: "CLT",
-        publicacao: "22/07/2022",
-      },
-      {
-        titulo: "Analista de Banco de Dados Sênior",
-        descricao:
-          "Domínio dos bancos de dados SQL Server, Oracle, Postgre e MySQL",
-        salario: 9000,
-        modalidade: "Presencial",
-        tipo: "PJ",
-        publicacao: "23/07/2022",
-      },
-      {
-        titulo: "Programador Web Júnior",
-        descricao:
-          "Conhecimentos básicos em HTML, CSS, JavaScript, Bootstrap, PHP e MySQL",
-        salario: 3000,
-        modalidade: "Presencial",
-        tipo: "CLT",
-        publicacao: "24/07/2022",
-      },
-    ],
+    vagas: [],
   }),
   methods: {
     getUsuariosOnline() {
@@ -110,6 +64,10 @@ export default {
   },
   created() {
     setInterval(this.getUsuariosOnline, 4500); //a cada 1seg
+  },
+   //mounted / activated para ativar as informações
+  activated() {
+    this.vagas = JSON.parse(localStorage.getItem('vagas'))
   },
 };
 </script>
