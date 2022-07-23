@@ -1,11 +1,7 @@
 <template>
   <div>
-    <h1>componente app</h1>
-    <button @click="desmontarcomponente()">
-      Desmontar o componente conteudo
-    </button>
-    <TopoSite @nomeDoEventoQueSeraCapturadoNoComponentePai="$event('Texto 1', 124)" />
-    <ConteudoSite v-if="visibilidade"></ConteudoSite>
+    <TopoSite @navegar="componente = $event" />
+    <ConteudoSite v-if="visibilidade" :conteudo="componente" ></ConteudoSite>
   </div>
 </template>
 
@@ -17,15 +13,8 @@ export default {
   name: "App",
   data: () => ({
     visibilidade: true,
+    componente:'Home'
   }),
-  methods: {
-    desmontarcomponente() {
-      this.visibilidade = false;
-    },
-    acao(pai){
-      console.log(pai)
-    }
-  },
   
   components: {
     TopoSite,

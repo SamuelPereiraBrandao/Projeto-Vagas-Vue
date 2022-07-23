@@ -16,10 +16,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#" @click="navegarPara()">Home</a>
+            <a class="nav-link" href="#" @click="navegarPara('Home')">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link" @click="navegarPara()">Publicar Vaga</a>
+            <a href="#" class="nav-link" @click="navegarPara('PublicarVaga')">Publicar Vaga</a>
           </li>
         </ul>
       </div>
@@ -30,15 +30,12 @@
 export default {
   name: "TopoSite",
   methods:{
-    navegarPara(){
-      //console.log('chergamos aqui')
-      this. $emit('nomeDoEventoQueSeraCapturadoNoComponentePai', (p1, p2) => {
-        console.log('função de callback emitida pelo componente filho')
-        console.log("p1"+p1)
-        console.log("p2"+p2)
-      })
-    },
-  },
+    navegarPara(p){
+      this.$emit('navegar', p)
+    }
+  }
+  
+  
 };
 </script>
 <style>
