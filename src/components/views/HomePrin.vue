@@ -63,7 +63,7 @@ export default {
     },
   },
   created() {
-    setInterval(this.getUsuariosOnline, 4500); //a cada 1seg
+    setInterval(this.getUsuariosOnline, 4500); //a cada 4,5 seg
   },
    //mounted / activated para ativar as informações
   activated() {

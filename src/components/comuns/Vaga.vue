@@ -2,7 +2,7 @@
   <div class="card">
     <div class="card-header bg-dark text-white">{{ titulo }}</div>
     <div class="card-body">
-      <p>{{ descricaoVaga }}</p>
+      <p>{{ descricao }}</p>
     </div>
     <div class="card-footer">
       <small class="text-muted"
@@ -27,9 +27,9 @@ export default {
         } else return true; //se estiver válido
       },
     },
-    descricaoVaga: {
-      type: String,
-      default: "O contratante não adicionou uma descrição para essa vaga",
+    descricao:{
+      type:String,
+      default:"O contratante optou por não adicionar uma descrição a vaga."
     },
     salario: {
       type: [Number, String],
@@ -65,7 +65,7 @@ export default {
     },
     getPublicacao(){
       let dataPublicacao = new Date(this.publicacao)
-      return dataPublicacao.toLocaleString('pt-BR')
+      return dataPublicacao.toLocaleDateString('pt-BR')
     }
   }
 };

@@ -4,7 +4,7 @@
     <button @click="desmontarcomponente()">
       Desmontar o componente conteudo
     </button>
-    <TopoSite />
+    <TopoSite @nomeDoEventoQueSeraCapturadoNoComponentePai="$event('Texto 1', 124)" />
     <ConteudoSite v-if="visibilidade"></ConteudoSite>
   </div>
 </template>
@@ -22,7 +22,11 @@ export default {
     desmontarcomponente() {
       this.visibilidade = false;
     },
+    acao(pai){
+      console.log(pai)
+    }
   },
+  
   components: {
     TopoSite,
     ConteudoSite,

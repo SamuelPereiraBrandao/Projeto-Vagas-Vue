@@ -19,12 +19,8 @@
     <div class="row mt-3">
       <div class="col">
         <label for="" class="form-label">Descrição</label>
-        <textarea
-          type="text"
-          rows="5"
-          class="form-control"
-          v-model="descricao"
-        ></textarea>
+        <textarea type="text" rows="5" class="form-control" v-model="descricao">
+        </textarea>
 
         <div class="form-text">Informe os detalhes</div>
       </div>
