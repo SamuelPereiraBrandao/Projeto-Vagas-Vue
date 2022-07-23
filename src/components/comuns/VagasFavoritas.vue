@@ -27,7 +27,7 @@ export default {
 .divVagasFavoritas {
     position:absolute;
     z-index: 1;
-    top: 10px;
-    right: 5px
+    top: 70px;
+    right: 0px
 }
 </style>
