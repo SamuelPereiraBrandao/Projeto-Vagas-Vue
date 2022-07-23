@@ -10,23 +10,24 @@ import Home from "@/components/views/HomePrin.vue";
 import PublicarVaga from "@/components/views/PublicarVaga.vue";
 export default {
   name: "ConteudoSite",
-  props:{
-    conteudo:{
-      type:String,
-      required:true
+  props: {
+    conteudo: {
+      type: String,
+      required: true
     }
   },
   components: {
     Home,
     PublicarVaga,
   },
-  
+
 };
 </script>
 <style module>
 .teste {
   background-color: red;
 }
+
 #teste-2 {
   background-color: yellow;
 }

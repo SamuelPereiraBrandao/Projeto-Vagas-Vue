@@ -5,10 +5,8 @@
       <p>{{ descricao }}</p>
     </div>
     <div class="card-footer">
-      <small class="text-muted"
-        >Salário: R$ {{ salario }},00 | Modalidade: {{ getModalidade }} | Tipo
-        {{ getTipo }} | Publicação: {{ getPublicacao }}</small
-      >
+      <small class="text-muted">Salário: R$ {{ salario }},00 | Modalidade: {{ getModalidade }} | Tipo
+        {{ getTipo }} | Publicação: {{ getPublicacao }}</small>
     </div>
   </div>
 </template>
@@ -27,9 +25,9 @@ export default {
         } else return true; //se estiver válido
       },
     },
-    descricao:{
-      type:String,
-      default:"O contratante optou por não adicionar uma descrição a vaga."
+    descricao: {
+      type: String,
+      default: "O contratante optou por não adicionar uma descrição a vaga.",
     },
     salario: {
       type: [Number, String],
@@ -48,25 +46,29 @@ export default {
       required: true,
     },
   },
-  computed:{
-    getModalidade(){
-      switch(this.modalidade){
-        case '1': return 'Home Office'
-        case '2': return 'Presencial'
+  computed: {
+    getModalidade() {
+      switch (this.modalidade) {
+        case "1":
+          return "Home Office";
+        case "2":
+          return "Presencial";
       }
-      return ''
+      return "";
     },
-    getTipo(){
-      switch(this.tipo){
-        case '1': return 'CLT'
-        case '2': return 'PJ'
+    getTipo() {
+      switch (this.tipo) {
+        case "1":
+          return "CLT";
+        case "2":
+          return "PJ";
       }
-      return ''
+      return "";
     },
-    getPublicacao(){
-      let dataPublicacao = new Date(this.publicacao)
-      return dataPublicacao.toLocaleDateString('pt-BR')
-    }
-  }
+    getPublicacao() {
+      let dataPublicacao = new Date(this.publicacao);
+      return dataPublicacao.toLocaleDateString("pt-BR");
+    },
+  },
 };
 </script>

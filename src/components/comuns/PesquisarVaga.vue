@@ -5,17 +5,10 @@
       <div class="col">
         <div class="form-group">
           <label for="">Titulo da Vaga</label>
-          <input
-            class="form-control"
-            type="text"
-            name=""
-            id=""
-            placeholder="Pesquise por palavras chaves, por exemplo 'Vue', 'PHP', 'Junior', 'Pleno', 'Analista'"
-          />
-          <small class="form-text text-muted"
-            >Informe palavras palavras relacionadas com o título da vaga que
-            você procura</small
-          >
+          <input class="form-control" type="text" name="" id=""
+            placeholder="Pesquise por palavras chaves, por exemplo 'Vue', 'PHP', 'Junior', 'Pleno', 'Analista'" />
+          <small class="form-text text-muted">Informe palavras palavras relacionadas com o título da vaga que
+            você procura</small>
         </div>
       </div>
     </div>

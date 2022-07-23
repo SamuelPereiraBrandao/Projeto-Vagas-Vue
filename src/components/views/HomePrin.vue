@@ -14,28 +14,13 @@
 
     <div class="row mt-5">
       <div class="col-4">
-        <indicador
-          titulo="Vagas abertas"
-          indicador="100"
-          bg="bg-dark"
-          color="text-white"
-        ></indicador>
+        <indicador titulo="Vagas abertas" indicador="100" bg="bg-dark" color="text-white"></indicador>
       </div>
       <div class="col-4">
-        <indicador
-          titulo="Profissionais cadastrados"
-          indicador="225"
-          bg="bg-dark"
-          color="text-white"
-        ></indicador>
+        <indicador titulo="Profissionais cadastrados" indicador="225" bg="bg-dark" color="text-white"></indicador>
       </div>
       <div class="col-4">
-        <indicador
-          titulo="Visitantes online"
-          :indicador="usuariosOnline"
-          bg="bg-light"
-          color="text-dark"
-        ></indicador>
+        <indicador titulo="Visitantes online" :indicador="usuariosOnline" bg="bg-light" color="text-dark"></indicador>
       </div>
     </div>
   </div>
@@ -65,7 +50,7 @@ export default {
   created() {
     setInterval(this.getUsuariosOnline, 4500); //a cada 4,5 seg
   },
-   //mounted / activated para ativar as informações
+  //mounted / activated para ativar as informações
   activated() {
     this.vagas = JSON.parse(localStorage.getItem('vagas'))
   },
