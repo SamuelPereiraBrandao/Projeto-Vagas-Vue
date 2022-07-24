@@ -92,6 +92,14 @@ export default {
         publicacao: dataAtual.toISOString(), //data e hora no time zone UTc
       });
       localStorage.setItem("vagas", JSON.stringify(vagas));
+      this.resetaFormularioVaga()
+    },
+    resetaFormularioVaga() {
+      this.titulo = ""
+      this.descricao = ""
+      this.salario = ""
+      this.modalidade = ""
+      this.tipo = ""
     },
   },
 };
