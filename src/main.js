@@ -11,3 +11,5 @@ const app = createApp(App);
 
 //configurar a instância do pacote mit  
 app.config.globalProperties.emitter = emitter;
+//associar a instancia do vue com o elemento html de id app
+app.mount('#app')

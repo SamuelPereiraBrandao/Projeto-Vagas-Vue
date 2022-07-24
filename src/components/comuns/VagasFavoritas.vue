@@ -21,7 +21,12 @@
 <script>
 export default {
     name: "VagasFavoritas",
-};
+    mounted(){
+        this.emitter.on('eventoGlobal1', (p) => {
+            console.log('componente vagasFavoritas: ', p)
+        })
+    }
+}
 </script>
 <style scoped>
 .divVagasFavoritas {
