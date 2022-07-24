@@ -4,6 +4,7 @@
             <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
                 aria-controls="offcanvasRight">
                 Vagas Favoritas
+
             </button>
         </div>
 
@@ -14,25 +15,46 @@
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body">...</div>
+            <div class="offcanvas-body">
+                <ul class="list-group">
+                    <li class="list-group-item" v-for="(vaga, index) in vagas" :key="index">{{vaga}}</li>
+                </ul>
+            </div>
         </div>
     </div>
 </template>
 <script>
 export default {
     name: "VagasFavoritas",
-    mounted(){
-        this.emitter.on('eventoGlobal1', (p) => {
-            console.log('componente vagasFavoritas: ', p)
+    data: () => ({
+        vagas: []
+    }),
+    mounted() {
+        this.emitter.on('favoritarVaga', (titulo,salario,tipo) => {
+            this.vagas.push(titulo,salario,tipo)
         })
+        this.emitter.on('desfavoritarVaga', (titulo) => {
+            let indiceArray = this.vagas.indexOf(titulo)
+            if (indiceArray !== -1) this.vagas.splice(indiceArray, 1) //remover um elemento a partir de um indice do array
+
+
+        })
+
     }
 }
+
 </script>
 <style scoped>
-.divVagasFavoritas {
-    position:absolute;
-    z-index: 1;
-    top: 70px;
-    right: 0px
+.divVagasFavoritas{
+    margin-top:25px;
+    display:flex;
+    flex-direction:column;
+    
+}
+button{
+    border-color:#212529;
+}
+button:hover{
+    border-color:#212529; 
 }
 </style>

@@ -8,19 +8,28 @@
           <input class="form-control" type="text" name="" id=""
             placeholder="Pesquise por palavras chaves, por exemplo 'Vue', 'PHP', 'Junior', 'Pleno', 'Analista'" />
           <small class="form-text text-muted">Informe palavras palavras relacionadas com o título da vaga que
-            você procura</small>
+            você procura </small>
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col">
-        <button class="btn btn-outline-dark mt-2">Buscar</button>
+        <div>
+                <button class="btn btn-outline-dark mt-2">Buscar </button>
+        <vagas-favoritas />
+        </div>
+  
       </div>
     </div>
   </div>
 </template>
 <script>
+import VagasFavoritas from "@/components/comuns/VagasFavoritas.vue"
 export default {
+
   name: "PesquisarVaga",
+    components: {
+    VagasFavoritas
+  },
 };
 </script>

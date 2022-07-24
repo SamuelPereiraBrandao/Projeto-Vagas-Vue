@@ -7,14 +7,13 @@
           </div>
           <div>
             <div class="form-check form-switch">
-              <input type="checkbox" class="form-check-input">
+              <input type="checkbox" class="form-check-input" v-model="favoritada">
               <label for="" class="form-check-label">Favoritar</label>
-              <button class="btn btn-danger" @click="dispararEventoMitt()">teste</button>
             </div>
           </div>
         </div>
       </div>
-      </div>
+    </div>
     <div class="card-body">
       <p>{{ descricao }}</p>
     </div>
@@ -27,6 +26,9 @@
 <script>
 export default {
   name: "PagVaga",
+  data: () => ({
+    favoritada: false
+  }),
   //props: ["titulo", "descricaoVaga", "salario", "modalidade", "tipo", "publicacao"],
   props: {
     titulo: {
@@ -84,9 +86,18 @@ export default {
       return dataPublicacao.toLocaleDateString("pt-BR");
     },
   },
-  methods:{
-    dispararEventoMitt(){
-      this.emitter.emit('eventoGlobal1','Teste captura evento parâmetro')
+  methods: {
+
+  },
+  watch: {
+    favoritada(valorNovo) {
+      if (valorNovo) {
+        this.emitter.emit('favoritarVaga', this.titulo+'\n / Salario: R$ ' +this.salario)
+
+        
+      } else {
+        this.emitter.emit('desfavoritarVaga', this.titulo+'\n / Salario: R$ ' +this.salario)
+      }
     }
   }
 };
