@@ -54,18 +54,28 @@ export default {
   activated() {
     this.vagas = JSON.parse(localStorage.getItem('vagas'))
   },
+  mounted() {
+    this.emitter.on('filtrarVagas', vaga => {
+      const vagas = JSON.parse(localStorage.getItem('vagas'))
+
+      this.vagas = vagas.filter(reg => reg.titulo.toLowerCase().includes(vaga.titulo.toLowerCase())) //true ou false: o metodo filter cria um novo array com todos os elementos que passaram no teste implementado na função
+      console.log(vagas)
+    })
+  }
 };
 </script>
 <style >
-::-webkit-scrollbar{
-    width: 8px;
-  }
-  ::-webkit-scrollbar-track{
-    background: #212529;
-  }
-  ::-webkit-scrollbar-thumb{
-    background-color: #495057;
+::-webkit-scrollbar {
+  width: 8px;
+}
 
-    border-radius: 2px;
-  }
+::-webkit-scrollbar-track {
+  background: #212529;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #495057;
+
+  border-radius: 2px;
+}
 </style>
