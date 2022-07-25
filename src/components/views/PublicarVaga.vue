@@ -91,7 +91,7 @@ export default {
         tipo: this.tipo,
         publicacao: dataAtual.toISOString(), //data e hora no time zone UTc
       });
-      //localStorage.setItem("vagas", JSON.stringify(vagas));
+      localStorage.setItem("vagas", JSON.stringify(vagas));
       this.emitter.emit('alerta')
       this.resetaFormularioVaga()
     },

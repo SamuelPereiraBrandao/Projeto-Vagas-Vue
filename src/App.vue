@@ -1,7 +1,12 @@
 <template>
   <div>
     <TopoSite @navegar="componente = $event" />
-    <alerta v-if="exibirAlerta"></alerta>
+    <alerta v-if="exibirAlerta">
+    <div class="alert alert-success" role="alert">
+        Sua vaga foi publicada com sucesso! <br>
+        E já está na página principal
+    </div>
+    </alerta>
     <ConteudoSite v-if="visibilidade" :conteudo="componente"></ConteudoSite>
   </div>
 </template>
@@ -27,7 +32,7 @@ export default {
   mounted() {
     this.emitter.on('alerta', () => {
       this.exibirAlerta = 
-      setTimeout(() => this.exibirAlerta = false, 4000) //some em 4 seg
+      setTimeout(() => this.exibirAlerta = false, 4000) //some em 4seg
       console.log('Apresentar a mensagem de alerta customizada')
     })
   }

@@ -1,8 +1,8 @@
 <template>
-    <div class="alert alert-success" role="alert">
-        Sua vaga foi publicada com sucesso! <br>
-        E já está na página principal
-    </div>
+<div class="alert">
+    <slot></slot>
+</div>
+    
 </template>
 <script>
 export default {
