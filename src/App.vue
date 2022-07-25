@@ -1,11 +1,11 @@
 <template>
   <div>
     <TopoSite @navegar="componente = $event" />
-    <alerta v-if="exibirAlerta">
-    <div class="alert alert-success" role="alert">
-        Sua vaga foi publicada com sucesso! <br>
-        E já está na página principal
-    </div>
+    <alerta v-if="exibirAlerta" :tipo="alerta.tipo">
+      <div :class="estiloAlerta" role="alert">
+       {{alerta.titulo}} <br>
+        {{alerta.descricao}}
+      </div>
     </alerta>
     <ConteudoSite v-if="visibilidade" :conteudo="componente"></ConteudoSite>
   </div>
@@ -20,7 +20,12 @@ export default {
   data: () => ({
     visibilidade: true,
     componente: 'Home',
-    exibirAlerta: false
+    exibirAlerta: false,
+    alerta: {
+      titulo:'',
+      descricao:'',
+      tipo:''
+    }
   }),
 
   components: {
@@ -30,10 +35,11 @@ export default {
 
   },
   mounted() {
-    this.emitter.on('alerta', () => {
-      this.exibirAlerta = 
+    this.emitter.on('alerta', (a) => {
+      this.alerta = a
+      console.log(this.alerta)
+      this.exibirAlerta = true;
       setTimeout(() => this.exibirAlerta = false, 4000) //some em 4seg
-      console.log('Apresentar a mensagem de alerta customizada')
     })
   }
 };

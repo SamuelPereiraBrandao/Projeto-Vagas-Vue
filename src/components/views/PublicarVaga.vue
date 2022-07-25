@@ -91,9 +91,22 @@ export default {
         tipo: this.tipo,
         publicacao: dataAtual.toISOString(), //data e hora no time zone UTc
       });
-      localStorage.setItem("vagas", JSON.stringify(vagas));
-      this.emitter.emit('alerta')
-      this.resetaFormularioVaga()
+      if (this.validarFormulario()) {
+        localStorage.setItem("vagas", JSON.stringify(vagas));
+        this.emitter.emit('alerta', {
+          tipo:'sucesso',
+          titulo: `A vaga '${this.titulo}', foi cadastrada com sucesso!`,
+          descricao: `e poderá ser consultada a qualquer momento, em nossa plataforma`
+        })
+        this.resetaFormularioVaga()
+      } else {
+        this.emitter.emit('alerta', {
+          tipo:'erro',
+          titulo: `[[ERRO]] É muito importante ter todos os dados preenchidos`,
+          descricao: `Por favor adicione os dados restantes [[ERRO]]`
+        })
+      }
+
     },
     resetaFormularioVaga() {
       this.titulo = ""
@@ -102,6 +115,17 @@ export default {
       this.modalidade = ""
       this.tipo = ""
     },
+    validarFormulario() {
+      let valido = true
+      if (this.titulo === '') valido = false
+      if (this.descricao === '') valido = false
+      if (this.salario === '') valido = false
+      if (this.modalidade === '') valido = false
+      if (this.tipo === '') valido = false
+
+
+      return valido
+    }
   },
 };
 </script>
