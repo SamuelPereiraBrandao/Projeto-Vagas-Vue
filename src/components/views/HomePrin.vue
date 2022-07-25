@@ -56,5 +56,16 @@ export default {
   },
 };
 </script>
-<style scoped>
+<style >
+::-webkit-scrollbar{
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track{
+    background: #212529;
+  }
+  ::-webkit-scrollbar-thumb{
+    background-color: #495057;
+
+    border-radius: 2px;
+  }
 </style>

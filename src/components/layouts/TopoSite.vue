@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="#">Vagas</a>
+      <a class="navbar-brand" href="#"> <h3><span>Vagas</span> </h3> </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -32,9 +32,14 @@ export default {
 };
 </script>
 <style>
-.navbar {
-  border-radius: 0px 0px 10px 10px;
-  margin-left: 0.3rem;
-  margin-right: 0.3rem;
+
+.navbar-brand{
+ color:#68727c;
 }
+.navbar-brand :hover{
+ color:#f4faff;
+ transition: ease-out 0.2s;
+}
+
+
 </style>
