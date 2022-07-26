@@ -8,6 +8,7 @@
       </div>
     </alerta>
     <ConteudoSite v-if="visibilidade" :conteudo="componente"></ConteudoSite>
+    <rodape></rodape>
   </div>
 </template>
 
@@ -15,6 +16,7 @@
 import ConteudoSite from "@/components/layouts/ConteudoSite.vue"; // @ = src
 import TopoSite from "@/components/layouts/TopoSite.vue";
 import Alerta from "@/components/comuns/Alerta.vue"
+import Rodape from "@/components/comuns/Rodape.vue"
 export default {
   name: "App",
   data: () => ({
@@ -31,7 +33,8 @@ export default {
   components: {
     TopoSite,
     ConteudoSite,
-    Alerta
+    Alerta,
+    Rodape
 
   },
   mounted() {
