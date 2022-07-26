@@ -4,6 +4,7 @@
 
 ## 🏷️ Sobre 
 Site de vagas, um site que é capaz você cadastrar, pesquisar e favoritar as vagas
+<p align="left">Confira a aplicação: <a href="https://projeto-vagas-vue-samuelpereirabrandao.vercel.app/" target="_blank"> Adicione sua vaga, agora mesmo! <a/></p>
 
 ---
 
