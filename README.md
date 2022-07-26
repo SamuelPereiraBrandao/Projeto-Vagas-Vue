@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src="">
+    <img src="/src/assets/vagas-vue.gif">
 </h1>
 
 ## 🏷️ Sobre 
