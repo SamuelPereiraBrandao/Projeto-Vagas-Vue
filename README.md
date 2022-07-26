@@ -2,7 +2,7 @@
 <table align="center">
     <tr>
         <td>
-            <img src="src/assets/vagas-vue.gif" width="500px" alt="imagem-do-site" align="center">
+            <img src="./public/images/vagas-vue.gif" width="500px" alt="imagem-do-site" align="center">
         </td>
     </tr>
 
