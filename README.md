@@ -1,6 +1,12 @@
-<h1 align="center">
-    <img src="src/assets/vagas-vue.gif">
-</h1>
+#
+<table align="center">
+    <tr>
+        <td>
+            <img src="src/assets/vagas-vue.gif" width="500px" alt="imagem-do-site" align="center">
+        </td>
+    </tr>
+
+</table>
 
 ## 🏷️ Sobre 
 Site de vagas, um site que é capaz você cadastrar, pesquisar e favoritar as vagas
