@@ -17,7 +17,7 @@
             </div>
             <div class="offcanvas-body">
                 <ul class="list-group">
-                    <li class="list-group-item" v-for="(vaga, index) in vagas" :key="index">{{vaga}}</li>
+                    <li class="list-group-item" v-for="(vaga, index) in vagas" :key="index">{{ vaga }}</li>
                 </ul>
             </div>
         </div>
@@ -30,8 +30,8 @@ export default {
         vagas: []
     }),
     mounted() {
-        this.emitter.on('favoritarVaga', (titulo,salario,tipo) => {
-            this.vagas.push(titulo,salario,tipo)
+        this.emitter.on('favoritarVaga', (titulo, salario, tipo) => {
+            this.vagas.push(titulo, salario, tipo)
         })
         this.emitter.on('desfavoritarVaga', (titulo) => {
             let indiceArray = this.vagas.indexOf(titulo)
@@ -45,16 +45,18 @@ export default {
 
 </script>
 <style scoped>
-.divVagasFavoritas{
-    margin-top:25px;
-    display:flex;
-    flex-direction:column;
-    
+.divVagasFavoritas {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+
 }
-button{
-    border-color:#212529;
+
+button {
+    border-color: #212529;
 }
-button:hover{
-    border-color:#212529; 
+
+button:hover {
+    border-color: #212529;
 }
 </style>

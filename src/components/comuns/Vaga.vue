@@ -92,11 +92,11 @@ export default {
   watch: {
     favoritada(valorNovo) {
       if (valorNovo) {
-        this.emitter.emit('favoritarVaga', this.titulo+'\n / Salario: R$ ' +this.salario)
+        this.emitter.emit('favoritarVaga', this.titulo + '\n / Salario: R$ ' + this.salario)
 
-        
+
       } else {
-        this.emitter.emit('desfavoritarVaga', this.titulo+'\n / Salario: R$ ' +this.salario)
+        this.emitter.emit('desfavoritarVaga', this.titulo + '\n / Salario: R$ ' + this.salario)
       }
     }
   }

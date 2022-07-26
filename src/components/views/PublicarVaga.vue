@@ -94,14 +94,14 @@ export default {
       if (this.validarFormulario()) {
         localStorage.setItem("vagas", JSON.stringify(vagas));
         this.emitter.emit('alerta', {
-          tipo:'sucesso',
+          tipo: 'sucesso',
           titulo: `A vaga '${this.titulo}', foi cadastrada com sucesso!`,
           descricao: `e poderá ser consultada a qualquer momento, em nossa plataforma`
         })
         this.resetaFormularioVaga()
       } else {
         this.emitter.emit('alerta', {
-          tipo:'erro',
+          tipo: 'erro',
           titulo: `[[ERRO]] É muito importante ter todos os dados preenchidos`,
           descricao: `Por favor adicione os dados restantes [[ERRO]]`
         })

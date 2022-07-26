@@ -5,9 +5,20 @@
         <pesquisar-vaga></pesquisar-vaga>
       </div>
     </div>
-
+    <!--
+    <lista-vagas>
+      <template v-slot:titulo="slotProps">
+        {{ slotProps.dadosTitulo.titulo }}
+      </template>
+      <template v-slot:default="slotProps">
+        {{ slotProps.vagas }}
+      </template>
+      <template v-slot:rodape="slotProps">
+        {{ slotProps.dadosRodape.titulo }}
+      </template>
+    </lista-vagas>
+-->
     <lista-vagas></lista-vagas>
-
 
     <div class="row mt-5">
       <div class="col-4">
@@ -36,7 +47,7 @@ export default {
   },
   data: () => ({
     usuariosOnline: 0,
-    
+
   }),
   methods: {
     getUsuariosOnline() {
@@ -47,8 +58,8 @@ export default {
   created() {
     setInterval(this.getUsuariosOnline, 4500); //a cada 4,5 seg
   },
-  
-  
+
+
 };
 </script>
 <style >
